@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/checkers.css" />
+</head>
+
+<body class="border" style="background-color: burlywood;" id="body">
+
+    <div id="mobile" style="width: 50%;height: 100%;float: left;">
+        <div id="start" class="border">
+            <h1 style="text-shadow: 0 0 3px #FF0000;font-size: 100px;color: rgb(56, 20, 3);">Tiger Vs Lion</h1>
+        </div>
+        <div id="gamerule" class="border">
+            <h3>Game Rules</h3>
+            <ul>
+                <li>
+                    Every animal can move forward only
+                </li>
+                <li>
+                    Every animal can move digonally one step forward
+                </li>
+                <li>
+                    Player can win the game when :
+                </li>
+                <ol>
+                    <li>
+                        At least one animal reaches other side of board Or
+                    </li>
+                    <li>
+                        Kills all the animals of opponent
+                    </li>
+                </ol>
+
+            </ul>
+        </div>
+        <div id="gameScore" style="background-color: rgb(238, 122, 13);">
+            <div id="tiger" class="player">
+                <h1>player1 &#128047;</h1>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>No of lifes</h3>
+                        </td>
+                        <td>
+                            <h3 id="tigerScore">12</h3>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div id="lion" class="player">
+
+                <h1>player2 &#129409;</h1>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>No of lifes</h3>
+                        </td>
+                        <td>
+                            <h3 id="lionScore">12</h3>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div style="width: 50%;height: 100%;float: right;">
+        <div style="background-color: rgb(201, 185, 214);">
+            <div id="winner" class="mainpage" style="background-color: burlywood;">
+                <h1 id="data">Choose from here </h1>
+                <img src="/img/player1.gif" id="player1Success" alt="Smiley face" height="100%" width="100%">
+                <img src="/img/player2.gif" id="player2Success" alt="Smiley face" height="100%" width="100%">
+                <table id="loginTable">
+                    <tr><button id='btnCreate' class="button">Create New Game</button></tr>
+                    <tr>
+                        <div id="newGameId">Created Game Id : </div>
+                    </tr>
+                    <tr>
+                        <div id="error">Player name and game Id required</div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div><input type='text' class="inputbox" id='playerName' placeholder="Please enter player name"></div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><button id='btnJoin' class="button">Join a Game</button></td>
+                        <td><input type='text' class="inputbox" id='txtGameId' placeholder="Please enter Game Id"></td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <div id="reset" class="gamepage" id="reset">
+                                <input type="button" class="button" value="reset" onclick="reset()" />
+                            </div>
+                        </td>
+                        <td>
+                            <h3 id="gameId" class="gamepage">Game Id :</h3>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="chessboard gamepage" id="checkersBoard">
+                <!-- 1st -->
+                <div class="yellow" data-row="1" data-col="1" id="0">&#129409;</div>
+                <div class="red" id="1"></div>
+                <div class="yellow" data-row="1" id="2">&#129409;</div>
+                <div class="red" id="3"></div>
+                <div class="yellow" data-row="1" id="4">&#129409;</div>
+                <div class="red" id="5"></div>
+                <div class="yellow" data-row="1" id="6">&#129409;</div>
+                <div class="red" id="7"></div>
+
+                <!-- 2nd -->
+                <div class="red" id="8"></div>
+                <div class="yellow" data-row="2" id="9">&#129409;</div>
+                <div class="red" id="10"></div>
+                <div class="yellow" data-row="2" id="11">&#129409;</div>
+                <div class="red" id="12"></div>
+                <div class="yellow" data-row="2" id="13">&#129409;</div>
+                <div class="red" id="14"></div>
+                <div class="yellow" data-row="2" id="15">&#129409;</div>
+
+                <!-- 3rd -->
+                <div class="yellow" data-row="3" id="16">&#129409;</div>
+                <div class="red" id="17"></div>
+                <div class="yellow" data-row="3" id="18">&#129409;</div>
+                <div class="red" id="19"></div>
+                <div class="yellow" data-row="3" id="20">&#129409;</div>
+                <div class="red" id="21"></div>
+                <div class="yellow" data-row="3" id="22">&#129409;</div>
+                <div class="red" id="23"></div>
+
+                <!-- 4th -->
+                <div class="red" id="24"></div>
+                <div class="yellow" data-row="4" id="25"></div>
+                <div class="red" id="26"></div>
+                <div class="yellow" data-row="4" id="27"></div>
+                <div class="red" id="28"></div>
+                <div class="yellow" data-row="4" id="29"></div>
+                <div class="red" id="30"></div>
+                <div class="yellow" data-row="4" id="31"></div>
+
+                <!-- 5th -->
+                <div class="yellow" data-row="5" id="32"></div>
+                <div class="red" id="33"></div>
+                <div class="yellow" data-row="5" id="34"></div>
+                <div class="red" id="35"></div>
+                <div class="yellow" data-row="5" id="36"></div>
+                <div class="red" id="37"></div>
+                <div class="yellow" data-row="5" id="38"></div>
+                <div class="red" id="39"></div>
+
+                <!-- 6th -->
+                <div class="red" id="40"></div>
+                <div class="yellow" data-row="6" id="41">&#128047;</div>
+                <div class="red" id="42"></div>
+                <div class="yellow" data-row="6" id="43">&#128047;</div>
+                <div class="red" id="44"></div>
+                <div class="yellow" data-row="6" id="45">&#128047;</div>
+                <div class="red" id="46"></div>
+                <div class="yellow" data-row="6" id="47">&#128047;</div>
+
+                <!-- 7th -->
+                <div class="yellow" data-row="7" id="48">&#128047;</div>
+                <div class="red" id="49"></div>
+                <div class="yellow" data-row="7" id="50">&#128047;</div>
+                <div class="red" id="51"></div>
+                <div class="yellow" data-row="7" id="52">&#128047;</div>
+                <div class="red" id="53"></div>
+                <div class="yellow" data-row="7" id="54">&#128047;</div>
+                <div class="red" id="55"></div>
+
+                <!-- 8th -->
+                <div class="red" id="56"></div>
+                <div class="yellow" data-row="8" id="57">&#128047;</div>
+                <div class="red" id="58"></div>
+                <div class="yellow" data-row="8" id="59">&#128047;</div>
+                <div class="red" id="60"></div>
+                <div class="yellow" data-row="8" id="61">&#128047;</div>
+                <div class="red" id="62"></div>
+                <div class="yellow" data-row="8" id="63">&#128047;</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/checkers.js"></script>
+</body>
+
+</html>

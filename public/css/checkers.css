@@ -1,0 +1,155 @@
+/*Chessboard styling*/
+
+.chessboard {
+    width: 520px;
+    height: 520px;
+    margin: 1px;
+    border: 2px solid rgb(37, 8, 6);
+}
+
+.red,
+.yellow {
+    float: left;
+    width: 65px;
+    height: 65px;
+    font-size: 50px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+
+/*Chessboard colors*/
+
+.red {
+    background-color: rgb(124, 223, 154);
+}
+
+.yellow {
+    background-color: rgb(25, 108, 202);
+}
+
+
+/*Active player indication*/
+
+.active {
+    background-color: rgb(205, 186, 212);
+}
+
+.gamepage {
+    display: none;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.b1 {
+    background-color: rgb(87, 78, 92);
+}
+
+.b2 {
+    background-color: rgba(207, 155, 22, 0.664);
+}
+
+.select {
+    background-color: rgb(32, 32, 4);
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    from {
+        background-color: rgb(32, 32, 4);
+    }
+    to {
+        background-color: rgb(109, 19, 211);
+    }
+}
+
+#gamescore {
+    display: none;
+}
+
+.success {
+    display: none;
+}
+
+.decoration {
+    text-shadow: 0 0 3px rgb(57, 5, 126);
+    font-size: 100px;
+}
+
+.border {
+    border-style: solid;
+    border-width: 5px;
+}
+
+
+/*If player 1 wins the game*/
+
+#player1Success {
+    display: none;
+}
+
+
+/*If player 2 wins the game*/
+
+#player2Success {
+    display: none;
+}
+
+
+/* If the screen size is 600px wide or less, hide the element */
+
+@media only screen and (max-width: 460px) {
+    #mobile {
+        display: none;
+    }
+}
+
+.inputbox {
+    width: 150%;
+    padding: 15px 32px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+#error {
+    display: none;
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+}
+
+input.placeholder {
+    text-align: center;
+}
+
+#newGameId {
+    display: none;
+    text-align: center;
+    color: rgba(2, 39, 11, 0.836);
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+}
+
+.inp {
+    width: 50%;
+    padding: 15px 32px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
