@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('https://tiger-vs-lion.herokuapp.com');
 let game = {
     "method": null,
     "gameId": null,
